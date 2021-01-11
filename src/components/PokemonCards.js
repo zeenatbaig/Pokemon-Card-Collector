@@ -4,6 +4,7 @@ import PokemonCard from './PokemonCardItem'
 
  const PokemonCards = (props) => {
 
+
     const {cards} = props
 
     return (
@@ -12,6 +13,7 @@ import PokemonCard from './PokemonCardItem'
             {cards.map((card) => {
                 return <PokemonCard
                     key={card.id}
+                    id={cards.id}
                     image={card.imageUrl}
                     name={card.name}
                     rarity={card.rarity}
