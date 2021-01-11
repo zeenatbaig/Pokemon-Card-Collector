@@ -22,6 +22,12 @@ function App() {
     // eslint-disable-next-line
   }, [])
 
+  //get single card
+
+  const getSingleCard = async (cardId) => {
+    let res = await axios.get("https://pokemontcg.io/cards/ecard3-146")
+  }
+
 
   return (
 

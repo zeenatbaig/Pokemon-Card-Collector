@@ -16,10 +16,7 @@ const PokemonCardItem = (props) => {
             <img src={image} alt="" style={{ width: '90px' }} ></img>
 
 
-            {/* <Link className='btn btn-dark btn-sm my-1' > more </Link> */}
-
-
-
+            <button className='btn btn-success btn-sm my-1' > more </button>
         </div>
     )
 }
