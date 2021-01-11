@@ -7,25 +7,30 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
 
   const [cards, setCards] = useState([]);
-
+  const [name,setname] = useState("");
   //get cards for home page
 
   const getCards = async () => {
 
-    let res = await axios.get("https://api.pokemontcg.io/v1/cards?name=pikachu")
+    let res = await axios.get("https://api.pokemontcg.io/v1/cards?name=" + name)
     setCards(res.data.cards)
   }
 
   useEffect(() => {
-    getCards();
+  
 
     // eslint-disable-next-line
   }, [])
 
 
   return (
+
     <div className="App">
-      <Home
+     
+      <Home 
+        getCards = {getCards} 
+        name = {name}
+        setname = {setname}
         cards={cards}
         setCards={setCards}
       />
